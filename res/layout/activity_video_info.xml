@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_video_info_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:gravity="center_horizontal"
+        android:padding="5dip"
+        android:text=""
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_video_info_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_video_info_title"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:padding="5dip"
+        android:text="2015-11-24 14:00"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_video_detail_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_video_info_time"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_video_info_icon"
+            android:layout_width="85dip"
+            android:layout_height="70dip"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="8dip"
+            android:background="#000"
+            android:padding="1dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_default" />
+
+        <TextView
+            android:id="@+id/tv_video_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="6dip"
+            android:layout_toRightOf="@id/iv_video_info_icon"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_store_zan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rl_video_detail_info" >
+
+        <ImageButton
+            android:id="@+id/iv_video_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:src="@drawable/userinfo_agree" />
+
+        <TextView
+            android:id="@+id/tv_agree_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="3dip"
+            android:text="0"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/iv_video_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:src="@drawable/detail_tool_share" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="3dip"
+            android:text="分享"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/iv_video_storage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/iv_video_share"
+            android:background="@android:color/transparent"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:src="@drawable/detail_tool_favorite_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dip"
+            android:text="收藏"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_video_info_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/rl_store_zan"
+        android:background="@android:color/darker_gray" />
+
+   <RelativeLayout
+        android:id="@+id/rl_video_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_store_zan"
+        android:background="@android:color/transparent" >
+        
+        <ProgressBar 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pb_loading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            />
+    </RelativeLayout> 
+
+    <!-- 評論列表 -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/commit_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_below="@id/iv_video_info_divider"
+        ptr:ptrAnimationStyle="flip"
+        android:layout_marginBottom="30dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#60a1e4"
+                android:paddingBottom="3dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="3dip"
+                android:text="最新评论"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <com.tropicana.ipangpang.view.ListViewForScrollView
+                android:id="@+id/comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/loadmore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="12dip"
+                android:text="加载更多评论"
+                android:textColor="@drawable/selector_load_more" />
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+    <!-- 底部评论输入栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#eee"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/text_shape"
+            android:hint="来评论一句吧"
+            android:paddingLeft="10dip"
+            android:textSize="15sp" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_commit"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:background="@drawable/btn_comment_commit_selector"
+            android:text="发表"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

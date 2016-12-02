@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+   <RelativeLayout 
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:padding="5dip"
+     android:layout_gravity="center_vertical"  
+       >
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:textColor="#000"
+        android:text="马龙接发球技巧分析，马龙正手弧圈球"
+        android:textSize="15sp"
+        android:id="@+id/tv_weixin_name"
+        android:background="#fff"
+        />
+     <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/darker_gray"
+        android:text="乒乓网"
+        android:textSize="15sp"
+        android:id="@+id/tv_source"
+        android:background="#fff"
+        android:layout_below="@id/tv_weixin_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dip"
+        />
+</RelativeLayout>
+    
+</LinearLayout>

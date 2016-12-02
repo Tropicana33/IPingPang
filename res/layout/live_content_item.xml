@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dip" 
+    android:layout_marginTop="15dip">
+    
+    <ImageView 
+        android:id="@+id/iv_hot_image"
+        android:layout_width="155dip"
+    	android:layout_height="100dip"
+    	android:scaleType="fitXY"
+    	android:src="@drawable/icon_default"
+        />
+
+    <TextView
+        android:id="@+id/tv_hot_spot_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="许昕vs樊振东"
+        android:textColor="#000"
+        android:textSize="16sp" 
+        android:layout_below="@id/iv_hot_image"
+        />
+
+</RelativeLayout>

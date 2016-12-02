@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="建议反馈"
+	    android:textColor="#000"
+	    android:layout_marginLeft="10dip"
+	    android:layout_marginTop="10dip"
+	    android:textSize="15sp"
+	    />
+    
+	<EditText 
+	    android:id="@+id/et_feedback_content"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:hint="请输入您的反馈意见"
+	    android:textSize="15sp"
+	    android:textColor="#000"
+	    android:padding="10dip"
+	    android:layout_margin="10dip"
+	    android:background="@drawable/text_shape"
+	    android:inputType="textMultiLine"
+	    android:minLines="5"
+	    android:gravity="left|top"/>
+	 <EditText
+        android:id="@+id/et_feedback_contacts"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:hint="请留下您的联系方式(如QQ)，方便我们联系您！谢谢您的配合"
+	    android:textSize="15sp"
+	    android:padding="10dip"
+	    android:layout_margin="10dip"
+	    android:textColor="#000"
+	    android:background="@drawable/text_shape"
+	    android:gravity="left|top"
+	    />
+    
+   
+    <Button 
+        android:id="@+id/btn_feedback_commit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送"
+        android:textSize="15sp"
+        android:layout_gravity="right"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:background="@drawable/btn_bg_selector"
+        android:layout_marginRight="10dip"
+        />
+</LinearLayout>

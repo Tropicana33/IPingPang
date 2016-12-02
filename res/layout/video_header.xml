@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.tropicana.ipingpang"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <com.tropicana.ipangpang.view.TopVideoPager
+            android:id="@+id/vp_top_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#a000" >
+
+            <TextView
+                android:id="@+id/tv_top_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="视频标题 "
+                android:textColor="@android:color/white"
+                android:layout_marginRight="40dip"
+				android:maxLines="2"
+				android:ellipsize="end"
+                android:textSize="13dp"/>
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="60dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:fillColor="#f00"
+                app:pageColor="#aaa"
+                android:padding="5dip" />
+        </RelativeLayout>
+
+</LinearLayout>

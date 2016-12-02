@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+     <item 
+        android:id="@+id/item_store_delete"
+        android:title="取消收藏"></item>
+     <item 
+        android:id="@+id/item_store_share"
+        android:title="分享"></item>
+
+</menu>

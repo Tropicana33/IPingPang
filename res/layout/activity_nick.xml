@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<EditText 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dip"
+    android:layout_margin="10dip"
+    android:hint="请输入您的昵称"
+    android:textColor="@android:color/darker_gray"
+    android:textSize="18sp"
+    android:background="@drawable/text_shape"
+    android:id="@+id/et_nick_change"
+    />
+    
+    
+</LinearLayout>

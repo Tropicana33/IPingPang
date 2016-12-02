@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp" 
+		android:background="#60a1e4"
+        >
+
+        <TextView
+            android:id="@+id/tv_pager_titie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="爱乒乓" 
+            android:textSize="20sp"
+            android:textColor="#fff"
+            />
+
+        <ImageButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_menu"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/img_menu"
+            
+            />
+         <ImageButton 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_msg"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/msg_icon"
+            android:layout_alignParentRight="true"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            />
+        
+    </RelativeLayout>
+
+    <FrameLayout 
+         android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        >
+        <FrameLayout
+        android:id="@+id/fl_pager_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        >
+        </FrameLayout>
+       <RelativeLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="match_parent" 
+    		android:id="@+id/rl_loading_empty_pager"
+    		android:visibility="invisible">
+
+    		<ImageView        
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_centerHorizontal="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/ic_empty_page" />
+		</RelativeLayout>
+		
+		<RelativeLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:id="@+id/rl_loading_pager" 
+    		android:visibility="invisible">
+
+    	<ProgressBar
+        	style="?android:attr/progressBarStyleLarge"
+        	android:layout_width="wrap_content"
+       	 	android:layout_height="wrap_content"
+        	android:layout_centerHorizontal="true"
+        	android:layout_centerVertical="true" />
+
+		</RelativeLayout>
+		<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" 
+        android:id="@+id/rl_loading_error_pager"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/page_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_error_page" />
+        <Button
+            android:id="@+id/btn_reload_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_below="@id/page_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_bg"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="加载失败，点击重试"
+            android:textColor="#ff717171"
+            android:textSize="14dp" />
+    </RelativeLayout>  
+    </FrameLayout>
+    
+       
+        
+    
+
+</LinearLayout>

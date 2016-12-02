@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sv_star"
+    >
+    
+    
+    <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"              
+                android:orientation="horizontal"
+                android:layout_marginTop="5dip" 
+                android:id="@+id/rl_star_info_down"
+                >
+               <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="球员简介"
+                android:textColor="#000"
+                android:textSize="20sp"  
+                android:layout_marginLeft="10dip"                             
+                /> 
+               
+            </LinearLayout>
+           	<LinearLayout 
+           	    android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_star_des"
+           	    >
+           	    <TextView 
+                android:id="@+id/tv_star_des"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                 android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"  
+                android:layout_marginLeft="10dip" 
+                android:layout_marginRight="10dip"
+                />
+            
+             <ImageButton 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_up"
+                android:id="@+id/btn_star_info_down"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dip"
+                android:background="@android:color/transparent"
+                    />
+           	</LinearLayout>
+            
+            <ImageView 
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@android:color/darker_gray"
+                 android:layout_marginTop="5dip"
+                />
+    	<com.tropicana.ipangpang.view.ListViewForScrollView
+        android:id="@+id/lv_star_video_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:dividerHeight="1dip"
+        android:divider="@android:color/darker_gray"
+        />
+
+	</LinearLayout>
+
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>

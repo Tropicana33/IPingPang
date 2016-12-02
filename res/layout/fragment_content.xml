@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+    
+    <com.tropicana.ipangpang.view.NoScrollViewPager
+         android:id="@+id/bottom_view_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_gravity="bottom"
+        android:layout_weight="1"/>
+    
+<RadioGroup 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rg_group"
+    android:background="#eee"
+    android:orientation="horizontal"
+    >
+    <RadioButton 
+        style="@style/BottomTabStyle"
+        android:drawableTop="@drawable/btn_tab_home_selector"
+        android:text="首页"
+        android:id="@+id/rb_home"
+        />
+    <RadioButton 
+        style="@style/BottomTabStyle"
+        android:drawableTop="@drawable/btn_tab_vedio_selector"
+        android:text="视频"
+        android:id="@+id/rb_vedio"
+        />
+    <RadioButton 
+        style="@style/BottomTabStyle"
+        android:drawableTop="@drawable/btn_tab_data_selector"
+        android:text="媒体中心"
+        android:id="@+id/rb_news"
+        />
+    <RadioButton 
+        style="@style/BottomTabStyle"
+        android:drawableTop="@drawable/btn_tab_news_selector"
+        android:text="明星"
+        android:id="@+id/rb_data"
+        />
+    <RadioButton 
+        style="@style/BottomTabStyle"
+        android:drawableTop="@drawable/btn_tab_setting_selector"
+        android:text="发现"
+        android:id="@+id/rb_setting"
+        />
+</RadioGroup>    
+
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+  
+    >
+    
+<RelativeLayout 
+    	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+    >
+     <ImageView 
+        android:layout_width="85dip"
+        android:layout_height="70dip"
+        android:id="@+id/iv_video_item"
+        android:src="@drawable/icon_default"
+        android:background="#000"
+        android:scaleType="fitXY"
+        android:padding="1dip"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="8dip"
+        android:layout_marginBottom="8dip"
+        android:layout_centerVertical="true"
+        />
+      
+      <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_video_item_title"
+        android:text="精彩绝伦的直拍技术 王皓vs朱世赫 乒乓球比赛视频"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:padding="10dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="6dip"
+        android:layout_marginBottom="6dip"
+        android:layout_toRightOf="@id/iv_video_item"
+        />
+
+       <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_video_item_date"
+        android:text="2015-11-1 16:40"
+        android:textSize="10sp"
+        android:layout_marginRight="20dip"
+        android:textColor="@android:color/darker_gray"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/iv_video_item"
+        />
+      
+</RelativeLayout>
+    
+  
+    
+</LinearLayout>

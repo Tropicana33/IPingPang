@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+     
+    <FrameLayout
+        android:id="@+id/fl_stars_pager_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <RelativeLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="match_parent" 
+    		android:id="@+id/rl_loading_empty_pager1"
+    		android:visibility="invisible">
+
+    		<ImageView        
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_centerHorizontal="true"
+        		android:layout_centerVertical="true"
+        		android:src="@drawable/ic_empty_page" />
+		</RelativeLayout>
+		
+		<RelativeLayout
+    		android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:id="@+id/rl_loading_pager1" 
+    		android:visibility="invisible">
+
+    	<ProgressBar
+        	style="?android:attr/progressBarStyleLarge"
+        	android:layout_width="wrap_content"
+       	 	android:layout_height="wrap_content"
+        	android:layout_centerHorizontal="true"
+        	android:layout_centerVertical="true" />
+
+		</RelativeLayout>
+		<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" 
+        android:id="@+id/rl_loading_error_pager1"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/page_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_error_page" />
+        <Button
+            android:id="@+id/btn_reload_pager1"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_below="@id/page_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_bg"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="加载失败，点击重试"
+            android:textColor="#ff717171"
+            android:textSize="14dp" />
+    </RelativeLayout>  
+</FrameLayout>

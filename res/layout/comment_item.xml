@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:padding="16dp"
+    android:background="#F7F7F7">
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView 
+            android:id="@+id/iv_comment_icon"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/default_head"
+            />
+        <TextView
+            android:id="@+id/userName_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#60a1e4"
+            android:text = "userName"
+            android:layout_toRightOf="@id/iv_comment_icon"
+            android:layout_marginLeft="10dip"
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_comment_date"
+            android:layout_alignLeft="@id/userName_comment"
+            android:layout_below="@id/userName_comment"
+            android:layout_marginTop="10dip"
+            android:textSize="13sp"
+            android:text="11-30 10:00"
+            android:textColor="@android:color/darker_gray"
+            />
+        <TextView
+            android:id="@+id/index_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "1楼"
+            android:gravity="center"
+            android:textColor="#888888"
+            android:layout_marginRight="4dp"
+            android:layout_alignParentRight="true"
+			android:background="@drawable/bg_comment_floor"
+            />
+    </RelativeLayout>
+	<TextView
+            android:id="@+id/content_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:text = "评论"
+            android:textSize="16sp"
+            android:textColor="#666666"
+            />
+</LinearLayout>
